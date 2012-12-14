@@ -7,7 +7,7 @@ no warnings;
 use Module::Patch 0.12 qw();
 use base qw(Module::Patch);
 
-our $VERSION = '0.01'; # VERSION
+our $VERSION = '0.02'; # VERSION
 
 my $mod_version = qr/^1\./;
 
@@ -93,7 +93,7 @@ sub patch_data {
 }
 
 1;
-# ABSTRACT: Make Time::Duration support millisecond
+# ABSTRACT: Make Time::Duration support milliseconds
 
 
 __END__
@@ -101,11 +101,11 @@ __END__
 
 =head1 NAME
 
-Time::Duration::Patch::Millisecond - Make Time::Duration support millisecond
+Time::Duration::Patch::Millisecond - Make Time::Duration support milliseconds
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -119,14 +119,12 @@ version 0.01
 
 =head1 DESCRIPTION
 
-This module contains patch for L<Time::Duration> to support millisecond. I am
-also in the process of asking Time::Duration's whether he/she wants to merge
-this into Time::Duration. See Time::Duration's RT queue [1].
+This module contains patch for L<Time::Duration> to support milliseconds. I am
+also in the process of asking Time::Duration's maintainer whether he/she wants
+to merge this into Time::Duration. See RT#81960.
 
-Locale modules might want to translate 'millisecond(s)' and provide its concise
-version as well.
-
-[1] https://rt.cpan.org/Dist/Display.html?Status=Active&Queue=Time-Duration
+Locale modules like L<Time::Duration::id> or L<Time::Duration::fr> might want to
+translate 'millisecond(s)' and provide its concise version as well.
 
 =for Pod::Coverage .+
 

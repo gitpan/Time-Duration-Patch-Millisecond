@@ -1,5 +1,5 @@
 {
-   "abstract" : "Make Time::Duration support millisecond",
+   "abstract" : "Make Time::Duration support milliseconds",
    "author" : [
       "Steven Haryanto <stevenharyanto@gmail.com>"
    ],
@@ -44,6 +44,6 @@
          "url" : "http://github.com/sharyanto/perl-Time-Duration-Patch-Millisecond"
       }
    },
-   "version" : "0.01"
+   "version" : "0.02"
 }
 

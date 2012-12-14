@@ -1,9 +1,9 @@
 NAME
     Time::Duration::Patch::Millisecond - Make Time::Duration support
-    millisecond
+    milliseconds
 
 VERSION
-    version 0.01
+    version 0.02
 
 SYNOPSIS
      # patch first before importing! otherwise you'll get unpatched version
@@ -15,15 +15,12 @@ SYNOPSIS
      say concise(duration(2.03)); # => 2s30ms
 
 DESCRIPTION
-    This module contains patch for Time::Duration to support millisecond. I
-    am also in the process of asking Time::Duration's whether he/she wants
-    to merge this into Time::Duration. See Time::Duration's RT queue [1].
+    This module contains patch for Time::Duration to support milliseconds. I
+    am also in the process of asking Time::Duration's maintainer whether
+    he/she wants to merge this into Time::Duration. See RT#81960.
 
-    Locale modules might want to translate 'millisecond(s)' and provide its
-    concise version as well.
-
-    [1]
-    https://rt.cpan.org/Dist/Display.html?Status=Active&Queue=Time-Duration
+    Locale modules like Time::Duration::id or Time::Duration::fr might want
+    to translate 'millisecond(s)' and provide its concise version as well.
 
 SEE ALSO
     Time::Duration
