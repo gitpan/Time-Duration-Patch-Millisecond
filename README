@@ -1,0 +1,39 @@
+NAME
+    Time::Duration::Patch::Millisecond - Make Time::Duration support
+    millisecond
+
+VERSION
+    version 0.01
+
+SYNOPSIS
+     # patch first before importing! otherwise you'll get unpatched version
+     use Time::Duration::Patch::Millisecond;
+
+     use Time::Duration;
+
+     say ago(0.3); # => 300 milliseconds ago
+     say concise(duration(2.03)); # => 2s30ms
+
+DESCRIPTION
+    This module contains patch for Time::Duration to support millisecond. I
+    am also in the process of asking Time::Duration's whether he/she wants
+    to merge this into Time::Duration. See Time::Duration's RT queue [1].
+
+    Locale modules might want to translate 'millisecond(s)' and provide its
+    concise version as well.
+
+    [1]
+    https://rt.cpan.org/Dist/Display.html?Status=Active&Queue=Time-Duration
+
+SEE ALSO
+    Time::Duration
+
+AUTHOR
+    Steven Haryanto <stevenharyanto@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2012 by Steven Haryanto.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
