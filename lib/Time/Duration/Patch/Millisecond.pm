@@ -7,7 +7,7 @@ no warnings;
 use Module::Patch 0.12 qw();
 use base qw(Module::Patch);
 
-our $VERSION = '0.02'; # VERSION
+our $VERSION = '0.03'; # VERSION
 
 my $mod_version = qr/^1\./;
 
@@ -93,7 +93,7 @@ sub patch_data {
 }
 
 1;
-# ABSTRACT: Make Time::Duration support milliseconds
+# ABSTRACT: (DEPRECATED) Make Time::Duration support milliseconds
 
 
 __END__
@@ -101,15 +101,16 @@ __END__
 
 =head1 NAME
 
-Time::Duration::Patch::Millisecond - Make Time::Duration support milliseconds
+Time::Duration::Patch::Millisecond - (DEPRECATED) Make Time::Duration support milliseconds
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
- # patch first before importing! otherwise you'll get unpatched version
+ # patch first before importing! otherwise you'll get unpatched version of
+ # concise(), interval(), and other routines.
  use Time::Duration::Patch::Millisecond;
 
  use Time::Duration;
@@ -121,7 +122,9 @@ version 0.02
 
 This module contains patch for L<Time::Duration> to support milliseconds. I am
 also in the process of asking Time::Duration's maintainer whether he/she wants
-to merge this into Time::Duration. See RT#81960.
+to merge this into Time::Duration. See RT#81960. B<UPDATE 2013-04-17:>
+Time::Duration 1.1 is now released which contains millisecond support. Therefore
+this patch is now declared deprecated.
 
 Locale modules like L<Time::Duration::id> or L<Time::Duration::fr> might want to
 translate 'millisecond(s)' and provide its concise version as well.
@@ -138,7 +141,7 @@ Steven Haryanto <stevenharyanto@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Steven Haryanto.
+This software is copyright (c) 2013 by Steven Haryanto.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

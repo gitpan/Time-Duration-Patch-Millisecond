@@ -12,12 +12,12 @@ my %module_build_args = (
   "configure_requires" => {
     "Module::Build" => "0.3601"
   },
-  "dist_abstract" => "Make Time::Duration support milliseconds",
+  "dist_abstract" => "(DEPRECATED) Make Time::Duration support milliseconds",
   "dist_author" => [
     "Steven Haryanto <stevenharyanto\@gmail.com>"
   ],
   "dist_name" => "Time-Duration-Patch-Millisecond",
-  "dist_version" => "0.02",
+  "dist_version" => "0.03",
   "license" => "perl",
   "module_name" => "Time::Duration::Patch::Millisecond",
   "recommends" => {},
